@@ -6,18 +6,28 @@ Plug 'terryma/vim-multiple-cursors'
 
 Plug 'ncm2/ncm2'
 Plug 'roxma/nvim-yarp'
-autocmd BufEnter * call ncm1#enable_for_buffer()
+
+" enable ncm2 for all buffers
+autocmd BufEnter * call ncm2#enable_for_buffer()
+" IMPORTANT: :help Ncm2PopupOpen for more information
 set completeopt=noinsert,menuone,noselect
+
 " NOTE: you need to install completion sources to get completions. Check
 " our wiki page for a list of sources: https://github.com/ncm2/ncm2/wiki
 Plug 'ncm2/ncm2-bufword'
 Plug 'ncm2/ncm2-path'
+Plug 'ncm2/ncm2-github'
 
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'airblade/vim-gitgutter'
 Plug 'preservim/nerdtree'
+Plug 'filipekiss/ncm2-look.vim'
+Plug 'ncm2/ncm2-syntax'
+Plug 'ncm2/ncm2-cssomni'
+Plug 'ncm2/ncm2-tern'
+Plug 'ncm2/ncm2-pyclang'
 
 call plug#end()
 
